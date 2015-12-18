@@ -1,0 +1,306 @@
+# author: jack
+
+Background {
+	# Color of the background 
+	color 0.01 0.01 .1 # a color
+	# low intensity white light
+	ambientLight 0.01 0.01 .1
+}
+
+Camera {
+	eye 0 0 -10
+	lookAt 0 0 0
+	up 0 1 0 
+	fovy 45
+}
+
+Lights {
+	Light {
+		position 0 20 -20
+		color .2 .2 .2
+	}
+	Light {
+		position -30 -3 32
+		color 1 1 1
+	}
+}
+
+Materials {
+	Material {
+		textureFilename water.jpg
+		diffuseColor 0 0 0
+		specularColor .2 .2 .3
+		reflectiveColor .7 .7 .8
+		shininess 0
+		transparentColor .5 .5 .5
+		indexOfRefraction .7
+	}
+	Material {
+		textureFilename moon.jpg
+		diffuseColor 0.5 0.2 0.2
+		specularColor 0.8 0.5 0.5
+		reflectiveColor 0 0 0
+		shininess 1
+		transparentColor 0 0 0
+		indexOfRefraction 0.5
+	}
+	Material {
+		textureFilename NULL
+		diffuseColor 1 1 .9
+		specularColor 1 1 .9
+		reflectiveColor 0 0 0
+		shininess 1
+		transparentColor 0 0 0
+		indexOfRefraction 0.5
+	}
+
+}
+
+Group {
+	# sea
+	Triangle {
+		vertex0 30 -3 30
+		vertex1 30 -3 -30
+		vertex2 -30 -3 -30
+		tex_xy_0 0 1s
+		tex_xy_1 0 0
+		tex_xy_2 1 0
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 30 -3 30
+		vertex1 -30 -3 30
+		vertex2 -30 -3 -30
+		tex_xy_0 0 1
+		tex_xy_1 1 1
+		tex_xy_2 1 0
+		materialIndex 0
+	}
+	# moon
+	Sphere {
+		materialIndex 1
+		center -10 0 30
+		radius 3
+	}
+	# stars
+	Sphere {
+		materialIndex 2
+		center 3 -1.5 35
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 4 4 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 20.25 2 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 18 10 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 0 1 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -17 14 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 23.5 9 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -8 10 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -3 9 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -5 4 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -22 1 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 1 11 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 20 5 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -13 7 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 25 12 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 19 0 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 18 14 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 17 18.5 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 16 4 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 15 19.25 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 14 19 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 13 1 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -5 10.25 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 11 13 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 10 6 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 9 7 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 8 6 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 10.25 12.5 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 8.5 16.25 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 5 2.25 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center 24 16.25 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -24 13.75 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -14 6 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -19 16 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -23 8.5 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -17 20.25 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -25 18.5 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -23 -2 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -20 10 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -16 18 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -9.5 20 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -18 9 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -2 16.5 40
+		radius .1
+	}
+	Sphere {
+		materialIndex 2
+		center -5 16.25 40
+		radius .1
+	}
+}
